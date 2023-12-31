@@ -1,0 +1,14 @@
+<div class="bg-dark">
+    <div class="pt-5">
+        <app-inputs
+        (inputValue)="onInput($event)">
+        </app-inputs>
+    </div>
+    <div class="pt-5">
+        <app-list-images
+        [img]="images.reverse()"
+        >
+
+        </app-list-images>
+    </div>
+</div>

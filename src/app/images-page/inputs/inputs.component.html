@@ -1,0 +1,13 @@
+<div class="container text-warning d-flex justify-content-start">
+    <div class="col-lg-3 col-md-4 col-sm-6">
+        <label class="form-label" for="name">Name</label>
+        <input [(ngModel)]="name" id="name" class="form-control" placeholder="enter name" type="text">
+    
+        <label class="form-label" for="desc">Description</label>
+        <input [(ngModel)]="description" id="desc" class="form-control" placeholder="enter description" type="text">
+    
+        <label class="form-label" for="url">Image URL</label>
+        <input [(ngModel)]="url" id="url" class="form-control" placeholder="enter url" type="text">
+        <button (click)="submit()" class="btn btn-warning mt-3">Save</button>
+    </div>
+</div>
