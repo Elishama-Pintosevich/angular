@@ -10,6 +10,9 @@ import { ListImagesComponent } from './images-page/list-images/list-images.compo
 import { ImageComponent } from './images-page/list-images/image/image.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
+import { ImgService } from './images-page/img.service';
+import { LoggingService } from './images-page/logging.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -24,9 +27,10 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [ImgService, LoggingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

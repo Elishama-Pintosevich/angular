@@ -8,7 +8,7 @@ import { Image } from './image.model';
 })
 export class ListImagesComponent {
   @Input('img') images: Image[]
-  // public images: Image[]
+  
 
  
  

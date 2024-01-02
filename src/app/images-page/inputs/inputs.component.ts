@@ -1,20 +1,22 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component } from '@angular/core';
 import { Image } from '../list-images/image.model';
+import { ImgService } from '../img.service';
 
 @Component({
   selector: 'app-inputs',
   templateUrl: './inputs.component.html',
-  styleUrl: './inputs.component.css'
+  styleUrl: './inputs.component.css',
 })
-export class InputsComponent {
+export class InputsComponent  {
   name: string
   description: string
   url: string 
-  @Output() inputValue = new EventEmitter<Image>();
+  constructor(private imgService: ImgService ){}
 
   public submit() {
-    console.log(this.name + " " + this.description + " " + this.url);
-    this.inputValue.emit(new Image(this.name, this.description, this.url))
+    console.log("click");
+    this.imgService.addImg(new Image(this.name, this.description, this.url))
+    // this.imgService.imgData.emit(new Image(this.name, this.description, this.url))
   }
     
 

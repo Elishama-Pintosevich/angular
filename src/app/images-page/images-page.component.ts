@@ -1,16 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Image } from './list-images/image.model';
+import {LoggingService} from './logging.service'
+import { ImgService } from './img.service';
 
 @Component({
   selector: 'app-images-page',
   templateUrl: './images-page.component.html',
-  styleUrl: './images-page.component.css'
+  styleUrl: './images-page.component.css',
 })
-export class ImagesPageComponent {
+export class ImagesPageComponent implements OnInit{
   public images: Image[] = []
-  public onInput(img: Image){
-    console.log(img);
-    this.images.push(img)
+  
+  constructor(private imgService: ImgService){
+    // this.imgService.imgData.subscribe(
+    //   (img: Image)=>{alert(`data: ${img.name} ${img.description}`)}
+    // )
+  }
+  ngOnInit(): void {
+    this.images = this.imgService.images
   }
 
 }
