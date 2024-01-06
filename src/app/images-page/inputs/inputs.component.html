@@ -9,5 +9,13 @@
         <label class="form-label" for="url">Image URL</label>
         <input [(ngModel)]="url" id="url" class="form-control" placeholder="enter url" type="text">
         <button (click)="submit()" class="btn btn-warning mt-3">Save</button>
+        <div *ngIf="loaded.length > 0">
+            <ul>
+                <li *ngFor="let item of loaded">
+                    <h5>{{item.name}}</h5>
+                    <p>{{item.description}}</p>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
