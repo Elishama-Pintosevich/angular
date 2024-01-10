@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { ImgService } from './images-page/img.service';
 import { LoggingService } from './images-page/logging.service';
 import { HttpClientModule } from '@angular/common/http';
+import { ImagePageComponent } from './image-page/image-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HttpClientModule } from '@angular/common/http';
     InputsComponent,
     ListImagesComponent,
     ImageComponent,
-    HeaderComponent
+    HeaderComponent,
+    ImagePageComponent
   ],
   imports: [
     BrowserModule,

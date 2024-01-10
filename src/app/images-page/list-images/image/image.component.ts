@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Image } from '../image.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-image',
@@ -11,6 +12,11 @@ export class ImageComponent {
   name: string
   description: string
   url: string
+  constructor(private router: Router){}
+
+  onClick = () => {
+    this.router.navigate(['/images',5])
+  }
 
 
 }
